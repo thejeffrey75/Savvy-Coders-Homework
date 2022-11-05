@@ -17,4 +17,7 @@ if (numberOfToppings>=10){
 else{
     console.log("Quality, not quantity.")
 }
-
+//Use loop to print even numbers
+for (let i=2;i<numberOfToppings;i+=2){
+console.log(i);
+}
