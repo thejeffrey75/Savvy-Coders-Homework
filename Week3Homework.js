@@ -2,45 +2,48 @@
 let pizzaToppings= ["Sausage","Spinach", "Ham", "Mushrooms"];
 //create function to greet customer
 function greetCustomer(){
-  console.log("Welcome Guest! Here are our toppings:" );
-  for(let key in pizzaToppings){
-  console.log (pizzaToppings[key] );
+
+  let greeting = `Welcome Customer! Here are our toppings: `;
+  for(let topping of pizzaToppings){
+    greeting += `${topping}`;
 }
+console.log(greeting);
 }
 greetCustomer();
 //creat a function to create pizza orders
 function getPizzaOrder(size,crust,...toppings) {
-  console.log(`One ${size} ${crust} crust pizza with ${toppings} coming up! `);
+  let orderUp = `One ${size} ${crust} crust pizza with ${toppings} coming up! `;
+  for (let topping of toppings){
+    orderUp += `${topping}`;
+  }
+console.log(orderUp);
   return [size,crust,toppings];
 }
 //Return getPizzaOrder function
-(getPizzaOrder('large','thin', 'sausage', 'ham', 'spinach'));
+
+let customerOrder= getPizzaOrder('large','thin', 'sausage', 'ham', 'spinach');
 
 // // create a function to prepare pizzas
 function preparePizza (size, crust, toppings){
   console.log(`The pizza is on the way!`);
   //create a Pizza object with appropiate key-value pairs
   let pizzaObj  = {
-    pizzaSize: 'large', 
+    pizzaSize: 'large',
     pizzaCrust: 'thin',
     pizzaToppings: [  'sausage', ' ham', ' spinach']
-  
+
   };
-  // console.log([size]);
-  // console.log(pizzaObj.size);
    return pizzaObj;
 }
  preparePizza(getPizzaOrder());
 
 // //create a serve Pizza function
 function servePizza(pizzaObj){
-  // for (let prop in pizzaObj) {
-  //   console.log(`pizzaObj.${prop} = ${pizzaObj[prop]}`);
-
-  // }
-  
-  console.log(`Order up! Here's your ${pizzaObj.pizzaSize} ${pizzaObj.pizzaCrust} crust pizza with ${pizzaObj.pizzaToppings}`);
-  
+let pizzaServed= `Order up! Here's your ${pizzaObj.pizzaSize} ${pizzaObj.pizzaCrust} crust pizza with ${pizzaObj.pizzaToppings}`;
+for (let topping of pizzaToppings){
+  pizzaServed+=`${topping}`;
+}
+console.log(pizzaServed);
 return pizzaObj;
   }
   servePizza(preparePizza());
