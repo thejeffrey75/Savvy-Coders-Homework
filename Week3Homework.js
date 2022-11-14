@@ -9,37 +9,39 @@ function greetCustomer(){
 }
 greetCustomer();
 //creat a function to create pizza orders
-function getPizzaOrder(size,crust,...toppings){
-  console.log(`One ${size} ${crust} crust pizza with ${toppings} coming up! `)
-  let pizzaArray= [size, crust, ...toppings];
-  return pizzaArray, getPizzaOrder;
+function getPizzaOrder(size,crust,...toppings) {
+  console.log(`One ${size} ${crust} crust pizza with ${toppings} coming up! `);
+  return [size,crust,toppings];
 }
 //Return getPizzaOrder function
-(getPizzaOrder('large','thick', 'sausage', 'ham', 'spinach'));
+(getPizzaOrder('large','thin', 'sausage', 'ham', 'spinach'));
 
-// create a function to prepare pizzas
-function preparePizza([size,],[crust],[...toppings]){
+// // create a function to prepare pizzas
+function preparePizza (size, crust, toppings){
   console.log(`The pizza is on the way!`);
   //create a Pizza object with appropiate key-value pairs
-  let pizza = {
-    size: pizzaArray[0],
-    crust: pizzaArray[1],
-    toppings:pizzaArray[2],
+  let pizzaObj  = {
+    pizzaSize: 'large', 
+    pizzaCrust: 'thin',
+    pizzaToppings: [  'sausage', ' ham', ' spinach']
   
-  }
-  console.log(pizza);
-  return pizza, preparePizza;
+  };
+  // console.log([size]);
+  // console.log(pizzaObj.size);
+   return pizzaObj;
 }
-preparePizza(getPizzaOrder);
-//create a serve Pizza function
-function servePizza(preparePizza){
+ preparePizza(getPizzaOrder());
 
-  console.log(`Order up! Here's your ${pizza.size} ${pizza.crust} crust pizza with ${pizza.toppings}`);
+// //create a serve Pizza function
+function servePizza(pizzaObj){
+  // for (let prop in pizzaObj) {
+  //   console.log(`pizzaObj.${prop} = ${pizzaObj[prop]}`);
+
+  // }
   
-return pizza, servePizza;
+  console.log(`Order up! Here's your ${pizzaObj.pizzaSize} ${pizzaObj.pizzaCrust} crust pizza with ${pizzaObj.pizzaToppings}`);
+  
+return pizzaObj;
   }
-  servePizza(preparePizza);
-//   servePizza(preparePizza);
-// // preparePizza('large', 'thick', 'sausage', 'ham', 'spinach');
-// // servePizza();
+  servePizza(preparePizza());
 
