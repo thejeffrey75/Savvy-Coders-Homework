@@ -13,29 +13,29 @@ greetCustomer();
 //creat a function to create pizza orders
 function getPizzaOrder(size,crust,...toppings) {
   let orderUp = `One ${size} ${crust} crust pizza with ${toppings} coming up! `;
-  for (let topping of toppings){
-    orderUp += `${topping}`;
-  }
+  //for (let topping of toppings){
+    //orderUp += `${topping}`;
+  //}
 console.log(orderUp);
   return [size,crust,toppings];
 }
 //Return getPizzaOrder function
 
-let customerOrder= getPizzaOrder('large','thin', 'sausage', 'ham', 'spinach');
+getPizzaOrder('large','thin', 'sausage', 'ham', 'spinach');
 
 // // create a function to prepare pizzas
 function preparePizza (size, crust, toppings){
   console.log(`The pizza is on the way!`);
   //create a Pizza object with appropiate key-value pairs
   let pizzaObj  = {
-    pizzaSize: 'large',
-    pizzaCrust: 'thin',
-    pizzaToppings: [  'sausage', ' ham', ' spinach']
+    pizzaSize: size,
+    pizzaCrust: crust,
+    pizzaToppings: toppings,
 
   };
    return pizzaObj;
 }
- preparePizza(getPizzaOrder());
+ preparePizza(getPizzaOrder('large','thin', 'sausage', 'ham', 'spinach'));
 
 // //create a serve Pizza function
 function servePizza(pizzaObj){
@@ -46,5 +46,5 @@ for (let topping of pizzaToppings){
 console.log(pizzaServed);
 return pizzaObj;
   }
-  servePizza(preparePizza());
+  servePizza(preparePizza('large','thin', 'sausage', 'ham', 'spinach'));
 
