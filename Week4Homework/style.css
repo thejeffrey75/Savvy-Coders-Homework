@@ -1,7 +1,7 @@
 body {
     background-color: #ffffff;
   }
-  
+
   h1{
     background-color: #ca0b0b;
     padding: 1em;
@@ -10,13 +10,13 @@ body {
     font-weight: 600;
     cursor: 'pointer';
   }
-  
+
   nav > ul > li {
     border: solid 1px;
     padding: .33em;
     display: inline-block;
   }
-  
+
   footer {
     padding: .5em;
     background-color: #e9e6e8;
@@ -36,4 +36,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  border: 2px solid rgb(0, 0, 0);
+  padding: .5em;
  }
