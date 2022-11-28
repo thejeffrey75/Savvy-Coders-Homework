@@ -1,0 +1,39 @@
+body {
+    background-color: #ffffff;
+  }
+  
+  h1{
+    background-color: #ca0b0b;
+    padding: 1em;
+    color: #D9D0DE;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: 'pointer';
+  }
+  
+  nav > ul > li {
+    border: solid 1px;
+    padding: .33em;
+    display: inline-block;
+  }
+  
+  footer {
+    padding: .5em;
+    background-color: #e9e6e8;
+  }
+  #retired {
+    background-color: #ffffff;
+  }
+ .Second{
+  font-size: 2.4em;
+  text-align: center
+ }
+ div > li {
+  text-align: center;
+ }
+ #picture{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+ }
