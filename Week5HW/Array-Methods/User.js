@@ -250,3 +250,5 @@ newArray2.push(thing.email);
 }
 obj.map((thing2)=> pushArray2(thing2));
 console.log(newArray2);
+
+//test
