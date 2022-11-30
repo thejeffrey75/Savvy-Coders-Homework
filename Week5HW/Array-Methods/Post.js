@@ -249,7 +249,7 @@ let obj=
   },
   {
     "userId": 5,
-    "id": 42,
+    'id': 42,
     "title": "commodi ullam sint et excepturi error explicabo praesentium voluptas",
     "body": "odio fugit voluptatum ducimus earum autem est incidunt voluptatem\nodit reiciendis aliquam sunt sequi nulla dolorem\nnon facere repellendus voluptates quia\nratione harum vitae ut"
   },
@@ -601,16 +601,15 @@ let obj=
     "title": "at nam consequatur ea labore ea harum",
     "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
   }
-]
-user5Posts=[];
+];
 
-function pushArray(thing){
- if (thing.userID==='5'){
-  return thing.body
-}
-// user5Posts.push(thing.title) ;
-// user5Posts.push(thing.body);
-}
+//create a list of user 5's posts
+const user5posts = obj.filter(thing => thing.userId === 5);
 
-obj.map((thing)=> pushArray(thing));
-console.log(user5Posts);
+console.log(user5posts);
+
+
+// create a list of title and body pairs
+
+const titleAndBodyPairs = obj.map(thing=>`${thing.title}, ${thing.body}`);
+console.log(titleAndBodyPairs);

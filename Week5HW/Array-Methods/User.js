@@ -238,7 +238,8 @@ function pushArray(thing){
 newArray.push(thing.phone);
 }
 obj.map((thing2)=> pushArray(thing2));
-console.log(newArray);
+
+// console.log(newArray);
 
 //create and print a list of website and email pairs (pair them in a string, array, or object)
 
@@ -249,6 +250,10 @@ newArray2.push(thing.website) ;
 newArray2.push(thing.email);
 }
 obj.map((thing2)=> pushArray2(thing2));
-console.log(newArray2);
+// console.log(newArray2);
 
 //test
+const phoneNumbers = obj.map(user=>user.phone);
+console.log(phoneNumbers);
+const websiteEmails= obj.map(user=>`${user.website}, ${user.email}`);
+console.log(websiteEmails);

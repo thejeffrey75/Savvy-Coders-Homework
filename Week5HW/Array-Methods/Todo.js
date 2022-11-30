@@ -1,6 +1,5 @@
 let obj= [
   {
-    //test
     "userId": 1,
     "id": 1,
     "title": "delectus aut autem",
@@ -1200,13 +1199,23 @@ let obj= [
     "title": "ipsam aperiam voluptates qui",
     "completed": false
   }
-]
+];
 // create a list of user 9's to-dos
-const toDos=
-function pushArray(thing){
-return (thing.title);
-  }
 
 
-obj.filter((thing)=> pushArray(thing));
+// filter the to-dos for incomplete tasks
+
+
+
+// filter for user 6's tasks
+const user9Tasks = obj.filter(thing => thing.userId === 9);
+
+console.log(user9Tasks);
+
+
+//const incompleteTasks = data.filter(task => task.completed === false);
+const toDos= obj.filter(thing => thing.completed=== false).length;
 console.log(toDos);
+
+
+
